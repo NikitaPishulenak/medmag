@@ -1,0 +1,87 @@
+AddDefaultCharset UTF-8
+RewriteEngine on
+RewriteBase /
+
+
+RewriteCond %{HTTP_HOST} .
+RewriteCond %{HTTP_HOST} !^medmag.bsmu.by [NC]
+RewriteRule (.*) https://medmag.bsmu.by/$1 [R=301,L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ /$1/ [R=301,L]
+
+
+RewriteRule ^main[/]?$ /index.php?go=main [L]
+
+
+RewriteRule ^news/view/([0-9]+)/([0-9]+)[/]?$ /index.php?go=news&id=$1&archiv=0&act=view&start=$2 [L]
+RewriteRule ^newsarchiv/view/([0-9]+)/([0-9]+)[/]?$ /index.php?go=news&id=$1&archiv=1&act=view&start=$2 [L]
+RewriteRule ^news/view/([0-9]+)[/]?$ /index.php?go=news&id=$1&archiv=0&act=view [L]
+RewriteRule ^newsarchiv/view/([0-9]+)[/]?$ /index.php?go=news&id=$1&archiv=1&act=view [L]
+RewriteRule ^news/([0-9]+)[/]?$ /index.php?go=news&archiv=0&start=$1 [L]
+RewriteRule ^newsarchiv/([0-9]+)[/]?$ /index.php?go=news&archiv=1&start=$1 [L]
+RewriteRule ^news[/]?$ /index.php?go=news&archiv=0 [L]
+RewriteRule ^newsarchiv[/]?$ /index.php?go=news&archiv=1 [L]
+
+RewriteRule ^allarticles/rubric([0-9]+)/page([0-9]+)/article([0-9]+)[/]?$ index.php?go=articles&orderBy=$1&start=$2&anons=$3 [L]
+RewriteRule ^allarticles/rubric([0-9]+)/article([0-9]+)[/]?$ index.php?go=articles&orderBy=$1&anons=$2 [L]
+RewriteRule ^allarticles/rubric([0-9]+)/page([0-9]+)[/]?$ index.php?go=articles&orderBy=$1&start=$2 [L]
+RewriteRule ^allarticles/rubric([0-9]+)[/]?$ index.php?go=articles&orderBy=$1 [L]
+RewriteRule ^allarticles/page([0-9]+)[/]?$ index.php?go=articles&act=AllArt&start=$1 [L]
+RewriteRule ^allarticles[/]?$ index.php?go=articles&act=AllArt [L]
+RewriteRule ^searchArticles/$ index.php?go=articles&act=search&%{QUERY_STRING} [L,NE]
+
+RewriteRule ^map[/]?$ /index.php?go=map [L]
+RewriteRule ^page/([0-9]+)/([0-9]+)[/]?$ /index.php?go=page&block=$1&menu=$2 [L]
+RewriteRule ^mpage/([0-9]+)/([0-9]+)[/]?$ /index.php?go=mpage&block=$1&menu=$2 [L]
+RewriteRule ^mpage/([0-9]+)/([0-9]+)/([0-9]+)[/]?$ /index.php?go=mpage&block=$1&menu=$2&act=$3 [L]
+
+
+RewriteRule ^qa/question/([0-9]+)[/]?$ /index.php?go=qa&act=single&questionid=$1 [L]
+RewriteRule ^qa/q([0-9]+)/addmess/([0-9]+)/([0-9]+)[/]?$ /index.php?go=qa&category=$1&act=addmess&start=$2&id=$3 [L]
+RewriteRule ^qa/addmess/([0-9]+)/([0-9]+)[/]?$ /index.php?go=qa&act=addmess&start=$1&id=$2 [L]
+RewriteRule ^qa/q([0-9]+)/addmess/([0-9]+)/$ /index.php?go=qa&category=$1&act=addmess&start=$2&%{QUERY_STRING} [L,NE]
+RewriteRule ^qa/addmess/([0-9]+)/$ /index.php?go=qa&act=addmess&start=$1&%{QUERY_STRING} [L,NE]
+RewriteRule ^qa/q([0-9]+)/addmess/([0-9]+)[/]?$ /index.php?go=qa&category=$1&act=addmess&start=$2 [L]
+RewriteRule ^qa/addmess/([0-9]+)[/]?$ /index.php?go=qa&act=addmess&start=$1 [L]
+RewriteRule ^qa/q([0-9]+)/([0-9]+)/addmess/([0-9]+)[/]?$ /index.php?go=qa&category=$1&id=$2&act=addmess&start=$3 [L]
+RewriteRule ^qa/([0-9]+)/addmess/([0-9]+)[/]?$ /index.php?go=qa&id=$1&act=addmess&start=$2 [L]
+RewriteRule ^qa/q([0-9]+)/rules/([0-9]+)/([0-9]+)[/]?$ /index.php?go=qa&category=$1&act=rules&start=$2&id=$3 [L]
+RewriteRule ^qa/rules/([0-9]+)/([0-9]+)[/]?$ /index.php?go=qa&act=rules&start=$1&id=$2 [L]
+RewriteRule ^qa/q([0-9]+)/rules/([0-9]+)[/]?$ /index.php?go=qa&category=$1&act=rules&start=$2 [L]
+RewriteRule ^qa/rules/([0-9]+)[/]?$ /index.php?go=qa&act=rules&start=$1 [L]
+RewriteRule ^qa/q([0-9]+)/([0-9]+)/Ok[/]?$ /index.php?go=qa&category=$1&start=$2&allert=1 [L]
+RewriteRule ^qa/q([0-9]+)/([0-9]+)[/]?$ /index.php?go=qa&category=$1&start=$2 [L]
+RewriteRule ^qa/([0-9]+)[/]?$ /index.php?go=qa&start=$1 [L]
+RewriteRule ^qa/q([0-9]+)[/]?$ /index.php?go=qa&category=$1 [L]
+RewriteRule ^qa[/]?$ /index.php?go=qa [L]
+
+
+RewriteRule ^rubric([0-9]+)/([0-9]+)[/]?$ /index.php?go=filesarchive_A&Rubric=$1&start=$2 [L]
+RewriteRule ^rubric([0-9]+)[/]?$ /index.php?go=filesarchive_A&Rubric=$1 [L]
+RewriteRule ^category([0-9]+)/article([0-9]+)[/]?$ /index.php?go=filesarchive_A&orderBy=$1&id=$2 [L]
+RewriteRule ^category([0-9]+)[/]?$ /index.php?go=filesarchive_A&orderBy=$1 [L]
+RewriteRule ^category([0-9]+)/([a-zA-Z0-9]+)[/]?$ /index.php?go=GetFile_A&orderBy=$1&uid=$2 [L]
+RewriteRule ^searchMedicaljournal/$ /index.php?go=filesarchive_A&act=search&%{QUERY_STRING} [L,NE]
+
+
+RewriteRule ^photos/([0-9]+)/tag/(.+)[/]$ /index.php?go=photosA&start=$1&tag=$2 [L]
+RewriteRule ^photos/tag/(.+)[/]$ /index.php?go=photosA&tag=$1 [L]
+RewriteRule ^photos/rubric([0-9]+)/([0-9]+)[/]?$ /index.php?go=photosA&rubric=$1&start=$2 [L]
+RewriteRule ^photos/rubric([0-9]+)[/]?$ /index.php?go=photosA&rubric=$1 [L]
+RewriteRule ^photos[/]?$ /index.php?go=photosA [L]
+
+
+RewriteRule ^searchInNews/$ /index.php?go=search&act=nw&%{QUERY_STRING} [L,NE]
+RewriteRule ^searchInFiles/$ /index.php?go=search&act=fl&%{QUERY_STRING} [L,NE]
+RewriteRule ^search/$ /index.php?go=search&%{QUERY_STRING} [L,NE]
+
+RewriteRule ^opros/voice/([0-9]+)/$ /index.php?go=opros&act=voice&id=$1&%{QUERY_STRING} [L,NE]
+RewriteRule ^opros/viewresult/([0-9]+)[/]?$ /index.php?go=opros&act=viewresult&id=$1 [L]
+
+AddType text/xml .xml
+
+ErrorDocument 404 /error.php
+ErrorDocument 403 /index.php

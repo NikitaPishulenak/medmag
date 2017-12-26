@@ -1,0 +1,31 @@
+body { font-size:8pt; color:#000000; font-family:Verdana, Arial; }
+A { color:#000050; font-size:8pt; font-family: Arial;}
+A:hover { color:#0303DC; }
+A.im:hover { }
+
+hr {color:#6C6C6C; height:1pt}
+
+td { font-size:8pt; color:#000000; font-family:Verdana, Arial;}
+td.bld { font-size:8pt; color:#000000; font-family:Verdana, Arial; font-weight:bold;}
+td.error { font-size:9pt; color:#ff0000;}
+td.usr {font-weight:bold; color:#ffffff; background-color:#8B8B8B;}
+td.menu {background-color:#E1E1E1;}
+td.menu1 {background-color:#F1F1F1;}
+td.menuC {background-color:#DDF5FE;}
+tr.menu {background-color:#E1E1E1;}
+tr.menu1 {background-color:#F1F1F1;}
+
+input { border: 1px #6C6C6C solid; font-size:7pt;}
+textarea { border: 1px #6C6C6C solid; font-size:8pt; }
+select { border: 1px #ffffff solid; font-size:7pt; }
+input.but { border: 1px #000000 solid; color: #ffffff;background-color: #6D6D6D; font-size:7pt;}
+input.chk { border: 0px #ffffff solid; }
+input.tmenu { border: 0px #F6F7F7 solid; background-color: #F6F7F7; font-size:8pt; color:#0303DC}
+input.tmnu { border: 0px #F6F7F7 solid; background-color: #F6F7F7; font-size:8pt; color:#FF0000}
+div.rt { color:#D60303; }
+b.gb { color:#E1EFFE; }
+
+
+/* Фотогалерея ------------------------------------------------------------------------------------------------- */
+
+div.imgAlbum { float:left; margin:10px; padding:7px; height:200px; border:1px solid #c0c0c0; }

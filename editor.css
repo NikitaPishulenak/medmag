@@ -1,0 +1,24 @@
+html,body { margin:0; padding:0; outline:0; font-weight:inherit; font-style:inherit; font-family:inherit; vertical-align:baseline;   }
+
+table { border-collapse:separate; border-spacing:0; }
+caption,th,td { text-align:left; font-weight:normal; }
+
+BODY,TABLE,TR,TD { font-family: Verdana; font-size:12px; }
+
+A { color:#004c99; font-family: Verdana; }
+A:visited { color:#003399; }
+A:hover { color:#00264c;}
+
+HR { color:#c4c4c4; background-color:#c4c4c4; height:1px; border-width:0px; }
+
+H1,H2 { font-weight:normal; color: #000; }
+
+IMG { border:4px solid #fff; -moz-box-shadow: 0 0 5px rgba(0,0,0,0.8); -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.8); box-shadow: 0 0 5px rgba(0,0,0,0.8); }
+
+ul { list-style-type: square; }
+
+SUP { text-decoration: underline; }
+
+input { margin:0; padding:0; outline:0; font-weight:inherit; font-style:inherit; font-size:100%; font-family:inherit; vertical-align:top; } 
+
+.alt_picture {  }

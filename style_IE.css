@@ -1,0 +1,61 @@
+    
+      BODY,TABLE,TR,TD { font-family: Verdana; font-size:13px; }
+
+      P { line-height:17px; color:#414141; } 
+      EM, I { font-family: Cambria, Times New Roman; font-size:15px; }
+
+      A { font-size:14px;  }
+      A:focus{outline:none; } 
+      A:hover {text-decoration:none; }
+
+      HR { height:1px; border-width:0px; color:#c4c4c4; background-color:#c4c4c4; }
+
+      H1, H1 A { font-size:28px; }
+      H2, H2 A { font-size:22px; }
+      H3, H3 A { font-size:18px; margin-bottom:0px; padding-bottom:0px; }
+
+
+      IMG { border:0; max-width: 100%; height: auto; }
+
+      SUP { text-decoration: underline; font-size:9px; }
+
+      blockquote { padding:10px; margin:5px; margin-left:15px; border: 1px solid #aaa; background:#fff; }
+
+      input { font-size:14px; }
+      textarea { font-size:14px; }
+
+      .alt_cont { display:none; color:#ffffff; background:rgb(12,19,62); padding:10px; } /* Всплывающие подписи к изображениям  */   
+   
+
+
+/* Стили постраничного вывода -------------------------------------------------------------------------------- */
+    
+   SPAN.cur { width:18px; height:15px; font-size:15px; }
+   SPAN.oth { font-size:13px; width:18px; height:15px; }
+
+
+
+        .inTable { width:80%; margin-left:50px; margin-bottom:10px; background-color:#fef6be; border:1px solid #bfb46a; padding:10px; font-size:12px; }
+        .tcom {  }
+        .datacolor { font-size:10px; color:#5b4f28; }
+
+
+/* Хлебные крошки -------------------------------------------------------------------------------- */
+
+         DIV.path { padding-right:20px; padding-bottom:10px; font-size:11px; }
+         DIV.path A { font-size:10px; }
+         DIV.path A:visited {  }
+         DIV.path A:hover {  }
+
+
+         FORM.search { margin-bottom:2px; margin-top:1px; }
+         FORM.search input.search_input { font-size:11px; width: 180px; padding:0px; height:15px; border:1px #7a88e9 solid; border-right:none; padding-left:5px; }
+         FORM.search input.search_image { border: 0px; cursor:hand; cursor:pointer; }
+
+  
+/* 404 ошибка -------------------------------------------------------------------------------- */
+
+      .Conteiner404 { padding-top:80px; }
+      .Number404 { float:left; min-width:473px; width:25%; background: url('/design/404.jpg') 80px 0px no-repeat; padding-top:180px; }
+      .Number404 span { display:block; width:393px; text-align: right; padding-right:20px; font-size:80px; background-color:#ad0101; color:#fff; font-family: 'Open Sans Condensed', Verdana; font-weight:bold; }
+      .Content404 { float:left; padding-right:100px; padding-left:15px; width:40%; }

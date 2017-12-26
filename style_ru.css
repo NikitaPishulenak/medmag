@@ -1,0 +1,31 @@
+@import url("/style_ru_desktop.css");
+@import url("/style_ru_mobile.css");
+
+html,body { margin:0; padding:0; outline:0; font-weight:inherit; font-style:inherit; font-family:inherit; vertical-align:baseline;   }
+
+table { border-collapse:separate; border-spacing:0; }
+caption,th,td { text-align:left; font-weight:normal; }
+
+BODY,TABLE,TR,TD,A,P { font-family: 'Exo 2'; font-size:15px; }
+
+A { color:#004c99; }
+A:visited { color:#003399; }
+A:hover { color:#00264c; text-decoration:none;}
+A:focus{outline:none; } 
+
+
+
+H1,H2,H3,H1 A, H2 A, H3 A { font-weight:normal; font-family: 'Open Sans Condensed', Cambria, Verdana; } 
+
+ul { list-style-type: square; }
+
+input { margin:0; padding:0; outline:0; font-weight:inherit; font-style:inherit; font-size:100%; font-family:inherit; vertical-align:top; } 
+ 
+.clear, .niled { clear:both; }
+
+#section0{background: url(design/fon_9.jpg)}
+#section1{background: url(design/fon_1.jpg)}
+#section2{background: url(design/fon_6.jpg)}
+#section3{background: url(design/fon_8.jpg)}
+#section4{background: url(design/fon_4.jpg)}
+#section0,#section1,#section2,#section3,#section4{background-size:cover}
